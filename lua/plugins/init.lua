@@ -1,5 +1,10 @@
 return {
   {
+    "folke/which-key.nvim",
+    enabled = false,
+  },
+
+  {
     "stevearc/conform.nvim",
     -- event = 'BufWritePre', -- uncomment for format on save
     opts = require "configs.conform",
@@ -13,13 +18,21 @@ return {
     end,
   },
 
-  -- {
-  -- 	"nvim-treesitter/nvim-treesitter",
-  -- 	opts = {
-  -- 		ensure_installed = {
-  -- 			"vim", "lua", "vimdoc",
-  --      "html", "css"
-  -- 		},
-  -- 	},
-  -- },
+  {
+    "nvim-treesitter/nvim-treesitter",
+    opts = {
+      ensure_installed = {
+        "vim",
+        "vimdoc",
+        "lua",
+        "html",
+        "css",
+        "rust",
+        "python",
+        "nix",
+        "terraform",
+        "json",
+      },
+    },
+  },
 }
